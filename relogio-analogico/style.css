@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
+    font-size: 10px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div.clock{
+    width: 800px;
+    height: 800px;
+    /* border: 1px solid black;  */
+    border-radius: 50%;
+    position: relative;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(235,235,235,1) 50%);
+    box-shadow: 0 0 15px gray;
+}
+
+/* PM - AM */
+div.pm-am{
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 3.5em;
+    border-radius: 10px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+/* POINTERS */
+
+
+
+
+span.pointer{
+    background-color: black;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 0 100%;
+}
+
+span.square{
+    background-color: black;
+    position: absolute;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+span.seconds{
+    background-color: red;
+    width: 5px;
+    height: 25%;
+    transform: rotate(0deg) translate(-50%, 0);
+}
+
+span.minutes{
+    width: 20px;
+    height: 30%;
+    transform: rotate(0deg) translate(-50%, 0);
+}
+
+span.hours{
+    width: 15px;
+    height: 23%;  
+    transform: rotate(0deg) translate(-50%, 0);
+}
+
+
+
+
+
+
+/* NUMBERS */
+
+
+
+
+
+
+
+
+span.number{
+    position: absolute;
+    font-size: 10em;
+    font-weight: 600;
+}
+
+span.twelve{
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+span.one{
+    right: 25%;
+    top: 8%;
+}
+
+span.two{
+    right: 10%;
+    top: 23%;
+}
+
+span.three{
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+span.four{
+    right: 10%;
+    bottom: 24%;
+}
+
+span.five{
+    right: 26%;
+    bottom: 8%;
+}
+
+span.six{
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+span.seven{
+    left: 26%;
+    bottom: 8%;
+}
+
+span.eigth{
+    left: 10%;
+    bottom: 24%;
+}
+
+span.nine{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+span.ten{
+    left: 8%;
+    top: 23%;
+}
+
+span.eleven{
+    left: 23%;
+    top: 8%;
+}
+
+
+@media (max-width: 800px) {
+    div.clock{
+        width: 100vw;
+        height: 100vw;
+    }
+}
+
+@media (max-width: 600px) {
+    body{
+        font-size: 7px;
+    }
+
+    span.seconds{
+        background-color: red;
+        width: 3px;
+        height: 23%;
+        transform: rotate(0deg) translate(-50%, 0);
+    }
+    
+    span.minutes{
+        width: 15px;
+        height: 28%;
+        transform: rotate(0deg) translate(-50%, 0);
+    }
+    
+    span.hours{
+        width: 10px;
+        height: 20%;  
+        transform: rotate(0deg) translate(-50%, 0);
+    }
+}
+
+@media (max-width: 424px) {
+    body{
+        font-size: 5px;
+    }
+}
