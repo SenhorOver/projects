@@ -28,7 +28,8 @@ class Clock{
         const minutes = time.getMinutes()
         const hours = time.getHours() >= 12 ? time.getHours() - 12 : time.getHours()
         this.secondsPointer.style.transform = `rotate(${seconds * 6}deg) translateX(-50%) translateY(0)`
-        this.minutesPointer.style.transform = `rotate(${minutes * 6}deg) translateX(-50%) translateY(0)`
+        if(!seconds > 0) { this.minutesPointer.style.transform = `rotate(${minutes * 6}deg) translateX(-50%) translateY(0)` } 
+        else { this.adjustMinutes(seconds, minutes) }
         if(!minutes > 0) return this.hoursPointer.style.transform = `rotate(${hours * 30}deg) translateX(-50%) translateY(0)`
         this.adjustHours(minutes, hours)
     }
@@ -36,6 +37,11 @@ class Clock{
     adjustHours(mins, hrs){
         const deg = hrs * 30 + (mins / 2)
         this.hoursPointer.style.transform = `rotate(${deg}deg) translateX(-50%) translateY(0)`
+    }
+
+    adjustMinutes(secs, mins){
+        const deg = mins * 6 + (secs / 10)
+        this.minutesPointer.style.transform = `rotate(${deg}deg) translateX(-50%) translateY(0)`
     }
 
     setAmPm(time){
