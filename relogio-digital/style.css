@@ -101,3 +101,100 @@ body{
         top: 0;
     }
 }
+
+
+
+
+
+/* MEDIA QUERIES */ 
+
+@media (max-width: 1800px) {
+    body{
+        font-size: 14px;
+    }
+
+    .hours, .minutes, .seconds{
+        height: 200px;
+    }
+
+
+    .num > span{
+        height: 200px;
+    }
+}
+
+@media (max-width: 1500px) {
+    body{
+        font-size: 11px;
+    }
+
+    .hours, .minutes, .seconds{
+        height: 160px;
+    }
+
+
+    .num > span{
+        height: 160px;
+    }
+}
+
+@media (max-width: 1200px) {
+    body{
+        font-size: 9px;
+    }
+
+    .hours, .minutes, .seconds{
+        height: 130px;
+    }
+
+
+    .num > span{
+        height: 130px;
+    }
+}
+
+@media (max-width: 950px) {
+    body{
+        font-size: 8px;
+    }
+
+    .hours, .minutes, .seconds{
+        height: 120px;
+        width: 20%;
+    }
+
+
+    .num > span{
+        height: 120px;
+    }
+}
+
+@media (max-width: 650px) {
+    body{
+        font-size: 6px;
+    }
+
+    .hours, .minutes, .seconds{
+        height: 90px;
+    }
+
+
+    .num > span{
+        height: 90px;
+    }
+}
+
+@media (max-width: 500px) {
+    body{
+        font-size: 5px;
+    }
+
+    .hours, .minutes, .seconds{
+        height: 75px;
+    }
+
+
+    .num > span{
+        height: 75px;
+    }
+}
