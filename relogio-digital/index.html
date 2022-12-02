@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="clock">
+        <div class="numbers">
+            <div class="hours">
+                <!-- Adicionar Mais spans dentro desse span, ou div, sla, uma será o valor antigo e a outra o valor atual, dessa forma posso fazer a animação a cada troca -->
+                <span class="num first-hr">
+                    <span class="actual-number">0</span>
+                    <span class="new-number">0</span>
+                </span>
+                <span class="num second-hr">
+                    <span class="actual-number">0</span>
+                    <span class="new-number">0</span>
+            </span>
+            </div>
+            <span class="colon">:</span>
+            <div class="minutes">
+                <span class="num first-min">
+                    <span class="actual-number">0</span>
+                    <span class="new-number">0</span>
+                </span>
+                <span class="num second-min">
+                    <span class="actual-number">0</span>
+                    <span class="new-number">0</span>
+                </span>
+            </div>
+            <span class="colon">:</span>
+            <div class="seconds">
+                <span class="num first-sec">
+                    <span class="actual-number">0</span>
+                    <span class="new-number">0</span>
+                </span>
+                <span class="num second-sec">
+                    <span class="actual-number">0</span>
+                    <span class="new-number">0</span>
+                </span>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

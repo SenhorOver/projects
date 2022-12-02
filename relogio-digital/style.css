@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Anton", Arial, Helvetica, sans-serif;
+    background-color: rgb(238, 238, 238);
+}
+
+.clock{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+
+
+
+
+
+/* NUMBERS */
+
+.numbers{
+    display: flex;
+    font-size: 15em;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.hours, .minutes, .seconds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    position: relative;
+    overflow: hidden;
+    height: 230px;
+}
+
+.colon{
+    margin: 0 5px;
+}
+
+.num{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.num > span{
+    height: 230px;
+    display: flex;
+    align-items: center; 
+}
+
+
+
+/* ANIMATIONS */
+
+.new-number{
+    position: absolute;
+    top: 100%;  
+}
+
+.actual-number{
+    position: absolute;
+    bottom: 0;
+}
+
+.new-number.on{
+    animation: rollUp 900ms ease-out 0ms 1 normal forwards;
+}
+
+.actual-number.on{
+    animation: rollDown 900ms ease-out 0ms 1 normal forwards;
+}
+
+@keyframes rollDown {
+    0%{
+        bottom: 0;
+    }
+    100%{
+        bottom: 100%;
+    }
+}
+
+@keyframes rollUp {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 0;
+    }
+}
