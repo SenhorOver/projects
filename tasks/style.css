@@ -1,0 +1,206 @@
+:root{
+    --bg-color: #2B2E43;
+    --secondary-color: #5b5eff;
+    --item-color: #484C69;
+
+    --black: #000;
+    --white: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+}
+
+
+div.container{
+    margin: 25px 0;
+}
+
+.none{
+    display: none;
+}
+
+
+
+
+/* TITLE */
+
+
+header.title{
+    padding: 15px 0;
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: center;
+    width: fit-content;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+
+
+/* FOOTER */
+
+section.actions{
+    width: 400px;
+}
+
+input#ipt-add{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 10px;
+    font-size: 1em;
+    
+}
+
+input#ipt-add.error{
+    outline: 2px solid red;
+}
+
+input#ipt-add.error::placeholder{
+    color: red;
+}
+
+p.helperText{
+    color: red;
+    margin: 3px 0 0 0;
+    font-size: 0.8em;
+}
+
+button.btn-add{
+    margin-top: 10px;
+    padding: 15px 10px;
+    width: 100%;
+    outline: 0;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    cursor: pointer;
+    border: 0;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+button.btn-add:hover{
+    background-color: var(--black);
+}
+
+button.btn-add:active{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+
+
+
+
+/* List */
+
+main.tasks-list{
+    width: 400px;
+}
+
+ul.list{
+    list-style: none;
+}
+
+li{
+    background-color: var(--item-color);
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: fit-content;
+}
+
+li.finished > span.content{
+    text-decoration: line-through;
+}
+
+li.finished > span.concluded{
+    background-color: rgb(66, 110, 66);
+}
+
+li.removed{
+    animation: removeAnim 200ms linear 0ms 1 forwards;
+}
+
+span.concluded{
+    user-select: none;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 150ms ease;
+}
+
+span.concluded:active{
+    background-color: rgb(66, 110, 66);
+}
+
+span.content{
+    max-width: 335px;
+}
+
+span.remove{
+    user-select: none;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 150ms ease;
+    position: absolute;
+    right: 15px;
+}
+
+span.remove:active{
+    background-color: rgb(114, 0, 0);
+}
+
+
+ul.list > li:last-child{
+    border-bottom: 0;
+}
+
+
+
+
+
+@keyframes removeAnim {
+    from{
+        transform: rotateX(0deg);
+    }
+
+    to{
+        transform: rotateX(90deg);
+    }
+}
